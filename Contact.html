@@ -4,73 +4,297 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AfriTalent</title>
-    <link href="Contact.css" rel="stylesheet" type="text/css">
-     <link ref="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+    <link rel="stylesheet" href="Contact.css" type="text/css">
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
 rel="stylesheet">
 </head>
 <body>
-     <nav>
-       <strong><SPAN>Afri</SPAN>Talent</strong>
-        <ul>
-          <li><a href="index.html">Acceuil</a></li>
-         <li><a href="freelances.html" >Freelances</a></li>
-        <li>  <a href="tarifs.html"> Tarifs</a></li>
-          <li> <a href="ABOUT.html" >Apropos</li>
-           <li><a href="Contact.html">Contact</a></li>
-           </ul>
-            <div>
-            <p>Connexion</p>
-            <p>Publier une mission </p>
-           </div>
-     </nav>
-  <hr color="orange">
+    
+ <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+ <div class="container">
+ <a class="navbar-brand" href="index.html">AfriTalent</a>
+ <button class="navbar-toggler" type="button"
+ data-bs-toggle="collapse"
+ data-bs-target="#navMenu"
+ aria-controls="navMenu"
+ aria-expanded="false"
+ aria-label="Toggle navigation">
+ <span class="navbar-toggler-icon"></span>
+ </button>
+ <div class="collapse navbar-collapse" id="navMenu">
+ <ul class="navbar-nav ms-auto">
+ <li class="nav-item"><a class="nav-link active"
+href="index.html">Accueil</a></li>
+ <li class="nav-item"><a class="nav-link"
+href="freelances.html">Freelances</a></li>
+ <li class="nav-item"><a class="nav-link"
+href="tarifs.html">Tarifs</a></li>
+ <li class="nav-item"><a class="nav-link" href="about.html">A
+propos</a></li>
+ <li class="nav-item"><a class="nav-link"
+href="contact.html">Contact</a></li>
+ </ul>
+ </div>
+ </div>
+</nav>
+ <!-- Contenu principal -->
+ <main>
+ <!-- Section Hero : accroche principale -->
+ <section id="hero">
+ <div class="container py-5">
+ <h1>connectez-vous aux meilleurs talents tech d'Afrique </h1>
+ <p> AfriTalent met en relation les entreprises innovantes et les freelances tech africains.</p>
+ <a href="freelances.html" class="btn btn-primary">Decouvrir les
+talents</a>
+ </div>
+ </section>
+ <!-- ═══ SECTION FORMULAIRE ═══ -->
+<section class="py-5">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-lg-8">
+        <div class="contact-form-card">
 
-  <header>
-    <h1>Contactez-nous</h1>
-    <h2>Parlons de votre projet</h2>
-    <p>Notre équipe vous répond sous 24h ouvrées. Pour les urgences, appelez-nous directement.</p>
+          <!-- Titre -->
+          <h2 style="font-size: 1.5rem; margin-bottom: 0.4rem;">
+            Envoyez-nous un message
+          </h2>
+          <p style="color: var(--text-muted); font-size: 0.875rem; 
+                     margin-bottom: 2rem;">
+            Tous les champs marqués d'un * sont obligatoires.
+          </p>
 
-    </header>
-    <hr>
-    <section> 
-    <form action="Contact.html" class="alabasta">
-      <legend> Envoyez nous un message</legend>
-      <div>
-        <label >Prénom *</label>
-        <input type="text" placeholder="Ex:Meryem" name="prenom" class="alabasta1">
+          <!-- Message succès -->
+          <div class="success-message" id="successMessage">
+            <div style="font-size: 2rem; margin-bottom: 0.5rem;">✅</div>
+            <h4 style="font-size: 1rem; margin-bottom: 0.25rem;">
+              Message envoyé avec succès !
+            </h4>
+            <p style="font-size: 0.85rem; color: var(--text-muted); 
+                       margin: 0;">
+              Notre équipe vous répondra dans les 24h. Merci !
+            </p>
+          </div>
+
+          <!-- Formulaire -->
+          <form id="contactForm" novalidate>
+            <div class="row g-3">
+
+              <!-- Prénom -->
+              <div class="col-md-6">
+                <div class="at-form-group">
+                  <label class="at-form-label" for="prenom">
+                    Prénom *
+                  </label>
+                  <input type="text" 
+                         class="at-form-control" 
+                         id="prenom" 
+                         placeholder="Ex: Meryem">
+                  <div class="at-form-error" id="err-prenom">
+                    Le prénom est requis (min. 2 caractères).
+                  </div>
+                </div>
+              </div>
+
+              <!-- Nom -->
+              <div class="col-md-6">
+                <div class="at-form-group">
+                  <label class="at-form-label" for="nom">
+                    Nom *
+                  </label>
+                  <input type="text" 
+                         class="at-form-control" 
+                         id="nom" 
+                         placeholder="Ex: Koné">
+                  <div class="at-form-error" id="err-nom">
+                    Le nom est requis (min. 2 caractères).
+                  </div>
+                </div>
+              </div>
+
+            </div>
+
+            <!-- Email -->
+            <div class="at-form-group">
+              <label class="at-form-label" for="email">
+                Adresse email *
+              </label>
+              <input type="email" 
+                     class="at-form-control" 
+                     id="email" 
+                     placeholder="exemple@email.com">
+              <div class="at-form-error" id="err-email">
+                Veuillez saisir une adresse email valide.
+              </div>
+            </div>
+
+            <!-- Téléphone -->
+            <div class="at-form-group">
+              <label class="at-form-label" for="telephone">
+                Téléphone
+              </label>
+              <input type="tel" 
+                     class="at-form-control" 
+                     id="telephone" 
+                     placeholder="+225 01 00 00 00 00">
+              <div class="at-form-error" id="err-telephone">
+                Format invalide. Exemple : +225 01 00 00 00 00
+              </div>
+            </div>
+
+            <!-- Profil -->
+            <div class="at-form-group">
+              <label class="at-form-label" for="profil">
+                Vous êtes *
+              </label>
+              <select class="at-form-control" id="profil">
+                <option value="">
+                  — Sélectionnez votre profil —
+                </option>
+                <option value="entreprise">
+                  Une entreprise cherchant des talents
+                </option>
+                <option value="freelance">
+                  Un freelance souhaitant rejoindre AfriTalent
+                </option>
+                <option value="investisseur">
+                  Un investisseur / partenaire
+                </option>
+                <option value="presse">
+                  Presse / Médias
+                </option>
+                <option value="autre">Autre</option>
+              </select>
+              <div class="at-form-error" id="err-profil">
+                Veuillez sélectionner votre profil.
+              </div>
+            </div>
+
+            <!-- Sujet -->
+            <div class="at-form-group">
+              <label class="at-form-label" for="sujet">
+                Sujet *
+              </label>
+              <input type="text" 
+                     class="at-form-control" 
+                     id="sujet" 
+                     placeholder="Résumez votre demande en quelques mots">
+              <div class="at-form-error" id="err-sujet">
+                Le sujet est requis (min. 5 caractères).
+              </div>
+            </div>
+
+            <!-- Message -->
+            <div class="at-form-group">
+              <label class="at-form-label" for="message">
+                Message *
+              </label>
+              <textarea class="at-form-control" 
+                        id="message" 
+                        rows="5" 
+                        maxlength="1000"
+                        placeholder="Décrivez votre projet..."
+                        style="resize: vertical;">
+              </textarea>
+              <div class="char-count">
+                <span id="charCount">0</span>/1000 caractères
+              </div>
+              <div class="at-form-error" id="err-message">
+                Le message est requis (min. 20 caractères).
+              </div>
+            </div>
+
+            <!-- RGPD -->
+            <div class="at-form-group">
+              <div style="display: flex; align-items: flex-start; 
+                           gap: 0.75rem;">
+                <input type="checkbox" 
+                       id="rgpd" 
+                       style="margin-top: 3px; 
+                              accent-color: var(--terra);
+                              width: 16px; height: 16px; 
+                              cursor: pointer;">
+                <label for="rgpd" 
+                       style="font-size: 0.82rem; 
+                              color: var(--text-muted); 
+                              cursor: pointer;">
+                  J'accepte que mes données soient traitées 
+                  par AfriTalent. 
+                  <a href="#" style="color: var(--terra);">
+                    Politique de confidentialité
+                  </a> *
+                </label>
+              </div>
+              <div class="at-form-error" id="err-rgpd">
+                Vous devez accepter la politique de confidentialité.
+              </div>
+            </div>
+
+            <!-- Bouton envoyer -->
+            <button type="submit" 
+                    class="btn-terra w-100" 
+                    id="submitBtn"
+                    style="border-radius: var(--radius-sm); 
+                           padding: 1rem;">
+              Envoyer le message →
+            </button>
+
+          </form>
+        </div>
       </div>
-      <div>
-        <label >Nom *</label>
-        <input type="text" placeholder="Ex:Fall" name="nom" >
-      </div>
-      <div>
-        <label >Adresse email *</label>
-        <input type="text" placeholder="exemple@email.com" name="mail" >
-      </div>
-      <div>
-        <label >Téléphone</label>
-        <input type="text" placeholder="+221: |" name="telephone" >
-      </div>
-      <div>
-        <label >Sujet*</label>
-        <input class="mess" type="text" placeholder="Resumez votre demande en quelque mots" name="demande" >
-      </div>
-      <div>
-        <label >Message*</label>
-        <input class="mess" type="text" placeholder="Decrivez votre projet,vos besoins,vos questions" name="demande">
-        <label><input  name="cgu" type="checkbox">J'accepte que mes données soient traitées par AfriTalent pour répondre à ma demande. </label>
-      </div>
-      <div>
-        <button type="submit">envoyer le message</button>
-      </div>
-    </form>
-    </section>
-    <hr> 
-    <main> 
-    <h2>Localisation</h2>
-    <h1>Notre siège à Abidjan</h1>
-    <p>Plateau Business Center — En face de la Mairie du Plateau</p>
-     <iframe src="https://www.openstreetmap.org/export/embed.html?bbox=-0.004017949104309083%2C51.47612752641776%2C0.00030577182769775396%2C51.478569861898606&amp;layer=mapnik"></iframe>
-     </main>
+    </div>
+  </div>
+</section>
+ </main>
+
+ <!-- ═══ SECTION LOCALISATION ═══ -->
+<section class="py-5" style="background: var(--cream);">
+  <div class="container">
+
+    <!-- Titre -->
+    <div class="text-center mb-4">
+      <div class="section-label">Localisation</div>
+      <h3 style="font-size: 1.6rem;">Notre siège à Abidjan</h3>
+      <p style="color: var(--text-muted); font-size: 0.875rem;">
+        Plateau Business Center — En face de la Mairie du Plateau
+      </p>
+    </div>
+
+    <!-- Carte Google Maps -->
+    <div class="map-wrapper">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3972.6064780540586!2d-4.0247!3d5.3167!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xfc1ea5311959867%3A0xbe80b0f8679d4612!2sAbidjan%2C%20Plateau!5e0!3m2!1sfr!2sci!4v1707000000000!5m2!1sfr!2sci"
+        width="100%"
+        height="420"
+        style="border: 0; display: block;"
+        allowfullscreen=""
+        loading="lazy"
+        title="Localisation AfriTalent Abidjan">
+      </iframe>
+    </div>
+
+    <!-- Adresse sous la carte -->
+    <p style="text-align: center; font-size: 0.78rem; 
+               color: var(--text-muted); margin-top: 0.75rem;">
+      📍 Plateau Business Center, Rue des Jardins, 
+      Plateau, Abidjan, Côte d'Ivoire
+    </p>
+
+  </div>
+</section>
+ <!-- Pied de page -->
+  <footer>
+ <div class="container py-4">
+ <p>&copy; 2025 AfriTalent. Tous droits reserves.</p>
+ </div>
+ </footer>
+ <script
+src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+></script>
+ <script src="js/main.js"></script>
+       
+
+
 </body>
 </html>

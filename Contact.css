@@ -1,4 +1,4 @@
-*{
+/* *{
     margin: 0;
 }
 span{
@@ -15,7 +15,7 @@ nav{
     gap: 25%;
     justify-content: space-around;
 }
-nav ul{
+nav .container{
      padding: 25px 5% ;
      display: flex;
      align-items: center;
@@ -30,7 +30,7 @@ nav div {
     justify-content:center;
      display: inline-flex;
 }
-nav ul li a{
+nav .nav-link{
     color: white;
   
 }
@@ -139,6 +139,6 @@ main p{
    padding: 0% 20% 1% 30%;
    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
    font-size:20px;
-}
+} */
 
  

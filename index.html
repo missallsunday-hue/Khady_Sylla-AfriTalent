@@ -10,131 +10,107 @@
 rel="stylesheet">
 </head>
 <body>
-    <nav>
-        <strong><SPAN>Afri</SPAN>Talent</strong>
-        <ul>
-       <li><a href="index.html">Acceuil</a></li>
-         <li><a href="freelances.html" >Freelances</a></li>
-        <li>  <a href="tarifs.html"> Tarifs</a></li>
-          <li> <a href="ABOUT.html" >Apropos</li>
-           <li><a href="Contact.html">Contact</a></li>
-           </ul>
-           <div>
-            <p>Connexion</p>
-            <p>Publier une mission </p>
-           </div>
-    </nav>
-    <hr color="orange">
-    <p1>Plateforme #1 des talents tech africains</p1>
-    <h>connectez-vous aux meilleurs talents tech d'Afrique</h>
-    <p1>AfriTalent met en relation les entreprises innovantes et les freelances tech africains d'exellence-developpeurs, designers, data scientists-verifies et disponible</p1>
-    <button>Trouver un talent</button>
-    <button>Poster une mission</button>
-    <section>
-        <table>
-            <tr>
-        
-             <td>  
-                <strong>8 500+</strong> 
-        <p1>Freelances actifs</p1></td>
-         <td><strong>3 200+</strong> 
-        <p1>Entreproses  lientes</p1></td>
-        <td><strong>24h</strong> 
-        <p1>Mise en relation </p1></td>
-        <td><strong>4.9/5</strong>
-        <p1>Note moyenne</p1></td>
-        </tr>
-        </table>
-    </section>
-    <section>
-        <div>
-            <p>TALENTS DISPONIBLES MAINTENANT</p>
-            <div>
-                <p>Nico D Robin  full-stack React/node.js 650$/j</p>
-            </div>
-
-            <div>
-                <p>Eren Yegger Data Science/python 720$/j</p>
-            </div>
-
-            <div>
-                <p>Saturo Gojo UX/UI Designer Figma 480$/j </p>
-            </div>
-
-            <div>
-                <p>Light Yagami DevOps/Kubernetes 800$/j</p>
-            </div>
-        </div>
-    </section>
-<hr> 
-    <section>
-        <p4>COMMENT CA MARCHE </p4>
-        <h2>De 0 a la mission lancee en monis de 48h</h2>
-        <div>
-            <p3>ETAPE 1</p3>
-            <strong>Publiez votre besoin</strong>
-            <p5>Decrivez votre projet,votre stack et votre budjet en 5 minutes chrono.</p5>
-        </div>
-
-        <div>
-            <p3>ETAPE 2</p3>
-            <strong>Recevez vos 3 meilleurs profils</strong>
-            <p5>Notre IA analyse votre besoin et selectionne les freelances les plus adaptes parmi nos 8500+ talnets verifies. Livraison en 24h</p5>
-            <div></div>
-            <p>Matching IA</p>
-            <p>Verification manuelle</p>
-              <p>Top 3 garanti</p>
-              </div>
-        </div>
-
-        <div>
-            <p3>ETAPE 3</p3>
-            <strong>Interviewez & choisissez</strong>
-            <p5>Entretien video integre,v acces au portfolio complet et aux avis clients. Vous choissisez en toute confiance.</p5>
-        </div>
-
-        <div>
-            <p3>ETAPE 4</p3>
-            <strong>Lancez la mission </strong>
-            <p5>Contrat signe electroniquement, paiement securise en sequestre, tableau de bord de suivi. Tout est gere par AfriTalent </p5>
-            <p4>Paiment garanti </p4>
-        </div>
-
-        <div>
-            <p3>ETAPE 5</p3>
-            <strong>Pret a demarrer ? C'est gratuit et sans engagement</strong>
-            <p5>Rejoignez 3 200+ entreprises qui font confiance a AfriiTalent pour leurs projets tech</p5>
-            <p4>Publier ma premiere mission </p4>
-        </div>
-        <hr>
-    </section>
-    <p4>NOS CATEGORIES</p4>
-    <strong>Explores les expertises de nos freelances </strong>
-    <hr>
-    <strong>Prêt à rejoindre l'Afrique Tech ?</strong>
-    <p4>Que vous soyez une entreprise ou un freelance, AfriTalent est fait pour vous.</p4>
-    <div>
-        <p>Explorer les talents</p>
-        <p>Voir les tarifs</p>
-    </div>
-    <hr>
+    
+ <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+ <div class="container">
+ <a class="navbar-brand" href="index.html">AfriTalent</a>
+ <button class="navbar-toggler" type="button"
+ data-bs-toggle="collapse"
+ data-bs-target="#navMenu"
+ aria-controls="navMenu"
+ aria-expanded="false"
+ aria-label="Toggle navigation">
+ <span class="navbar-toggler-icon"></span>
+ </button>
+ <div class="collapse navbar-collapse" id="navMenu">
+ <ul class="navbar-nav ms-auto">
+ <li class="nav-item"><a class="nav-link active"
+href="index.html">Accueil</a></li>
+ <li class="nav-item"><a class="nav-link"
+href="freelances.html">Freelances</a></li>
+ <li class="nav-item"><a class="nav-link"
+href="tarifs.html">Tarifs</a></li>
+ <li class="nav-item"><a class="nav-link" href="ABOUT.html">A
+propos</a></li>
+  <li class="nav-item"><a class="nav-link" href="Contact.html">Contact</a></li>
+ </ul>
+ </div>
+ </div>
+</nav>
+ <!-- Contenu principal -->
+ <main>
+ <!-- Section Hero : accroche principale -->
+ <section id="hero">
+ <div class="container py-5">
+ <h1>connectez-vous aux meilleurs talents tech d'Afrique </h1>
+ <p> AfriTalent met en relation les entreprises innovantes et les freelances tech africains.</p>
+ <a href="freelances.html" class="btn btn-primary">Decouvrir les
+talents</a>
+ </div>
+ </section>
+ <!-- Section Services -->
+ <section id="services">
+ <div class="container py-5">
+ <h2>Nos domaines d'expertise</h2>
+ <div class="row">
+    <div class="col-md-4">
+ <h3>Developpement Web</h3>
+ <p>Sites vitrine, applications web, e-commerce.</p>
+ </div>
+ <div class="col-md-4">
+ <h3>Design Graphique</h3>
+ <p>Identite visuelle, UI/UX, illustrations.</p>
+ </div>
+ <div class="col-md-4">
+ <h3>Marketing Digital</h3>
+ <p>Reseaux sociaux, SEO, campagnes publicitaires.</p>
+ </div>
+ </div>
+ </div>
+ </section>
+ <!-- Section Statistiques -->
+ <section id="statistiques">
+ <div class="container py-5">
+ <h2>AfriTalent en chiffres</h2>
+ <div class="row text-center">
+ <div class="col-md-4"><p>1 200+ Freelances</p></div>
+ <div class="col-md-4"><p>45 Pays representes</p></div>
+ <div class="col-md-4"><p>3 800+ Projets realises</p></div>
+ </div>
+ </div>
+</section>
+ <!-- Section Temoignages -->
+ <section id="temoignages">
+ <div class="container py-5">
+ <h2>Ce que disent nos clients</h2>
+ <blockquote class="blockquote">
+ <p>AfriTalent m'a permis de trouver un developpeur competent
+en moins de 48h.</p>
+ <footer class="blockquote-footer">Aminata Diallo, Directrice
+Marketing</footer>
+<p> "La qualité des profils proposés est impressionnante. Notre startup a recruté 4 freelances via AfriTalent en 6 mois. Le suivi de mission et la sécurité des paiements nous ont permis de travailler en toute sérénité avec des talents de haut niveau."</p>
+ <footer class="blockquote-footer"> 
+ Kwame Osei
+CEO · TechHub Accra</footer>
+<p>"En 36 heures, AfriTalent nous avait proposé 3 profils parfaitement adaptés. Nous avons signé avec notre développeur en 2 jours. Une efficacité remarquable et des profils d'une qualité que nous n'aurions pas trouvée aussi rapidement ailleurs." </p>
+ <footer class="blockquote-footer"> Christelle Loba
+CTO · Fintech Nkembo, Abidjan</footer>
+ </blockquote>
+ </div>
+ </section>
+ </main>
+ <!-- Pied de page -->
+  <footer>
+ <div class="container py-4">
+ <p>&copy; 2025 AfriTalent. Tous droits reserves.</p>
+ </div>
+ </footer>
+ <script
+src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+></script>
+ <script src="js/main.js"></script>
        
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    
 </body>
 </html>
