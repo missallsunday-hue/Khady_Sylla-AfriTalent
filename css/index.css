@@ -1,37 +1,382 @@
-*{
-    margin: 0;
-}
-span{
-    color:orangered ;
-}
-nav{
-    background-color: rgb(6, 6, 53);
-    display: flex;
-    align-items: left; 
-    color: white;
-    height: 3em;
-    padding: 0;
-    margin: 0;
-    gap: 25%;
-    justify-content: space-around;
-}
-nav ul{
-     padding: 25px 5% ;
-     display: flex;
-     align-items: center;
-     justify-content: space-between;
-      list-style: none;
-    gap: 15%;
-    
-}
-nav div {
-    display: flex;
-    align-items: end;
-    justify-content:center;
-     display: inline-flex;
-}
-nav ul li a{
-    color: white;
+ /* ═══ 1. IMPORT GOOGLE FONTS ═══ */
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300&family=Fraunces:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+
+/* ═══ 2. VARIABLES CSS (:root) ═══ */
+:root {
+
+  /* --- Couleurs principales --- */
+  --terra: #E05B2B;           /* orange terracotta */
+  --terra-dark: #b8421a;      /* terracotta foncé (hover) */
+  --terra-light: #f07a52;     /* terracotta clair */
+  --gold: #F4A622;            /* or africain */
+  --gold-light: #ffc85c;      /* or clair */
+  --charcoal: #1C1C2E;        /* noir bleuté */
+  --charcoal-2: #2a2a3e;      /* noir bleuté secondaire */
+
+  /* --- Couleurs de fond --- */
+  --cream: #FDF8F2;           /* crème chaud */
+  --cream-2: #f5ede0;         /* crème secondaire */
+  --white: #ffffff;           /* blanc pur */
+
+  /* --- Couleurs de texte --- */
+  --text: #ffffff;            /* texte principal */
+  --text-muted: #6b6b80;      /* texte secondaire */
+
+  /* --- Bordures et ombres --- */
+  --border: rgba(28,28,46,0.1);
+  --shadow: 0 4px 24px rgba(28,28,46,0.10);
+  --shadow-lg: 0 12px 48px rgba(28,28,46,0.16);
+
+  /* --- Espacements --- */
+  --spacing-xs: 0.25rem;      /* 4px */
+  --spacing-sm: 0.5rem;       /* 8px */
+  --spacing-md: 1rem;         /* 16px */
+  --spacing-lg: 2rem;         /* 32px */
+  --spacing-xl: 4rem;         /* 64px */
+
+  /* --- Border radius --- */
+  --radius: 16px;
+  --radius-sm: 8px;
+  --radius-xl: 28px;
+
+  /* --- Polices --- */
+  --font-titre: 'Fraunces', serif;
+  --font-corps: 'Plus Jakarta Sans', sans-serif;
+
+  /* ---images --- */
   
+  --img-hero: url('images/photo4.jpg');
+  --img-contact: url('images/photo2.jpg');
+
 }
 
+
+/* ═══ 3. RESET CSS + STYLES DE BASE ═══ */
+
+/* Reset universel */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Body */
+body {
+  font-family: var(--font-corps);
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.65;
+  color: var(--text);
+  background: var(--white);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+ 
+ #hero {
+  background-image:var(--img-hero);
+     background-size: cover;
+  background-position: center;
+  min-height: 500px;
+    color: var(--text);
+
+}
+
+/* Titres — police Fraunces */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-titre);
+  font-weight: 700;
+  line-height: 1.15;
+  color: var(--text);
+}
+
+/* Paragraphes */
+p {
+  margin-bottom: var(--spacing-md);
+  color: var(--text);
+}
+
+/* Liens */
+a {
+  color: var(--terra);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+a:hover {
+  color: var(--terra-dark);
+}
+
+/* Images */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Listes */
+ul, ol {
+  padding-left: var(--spacing-lg);
+}
+
+
+/* ═══ 4. NAVBAR ═══ */
+
+.at-nav {
+  background: var(--charcoal);
+  padding: 0 2rem;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  border-bottom: 2px solid var(--terra);
+  height: 70px;
+  display: flex;
+  align-items: center;
+}
+
+/* Logo */
+.at-nav .navbar-brand {
+  font-family: var(--font-titre);
+  font-weight: 700;
+  font-size: 1.5rem;
+  color: var(--white) !important;
+  letter-spacing: -0.5px;
+  text-decoration: none;
+}
+
+/* Couleur de l'accent du logo */
+.at-nav .navbar-brand span {
+  color: var(--gold);
+}
+
+/* Liens de navigation */
+.at-nav .nav-link {
+  color: rgba(255, 255, 255, 0.75) !important;
+  font-family: var(--font-corps);
+  font-weight: 500;
+  font-size: 0.9rem;
+  padding: 0.5rem 0.85rem !important;
+  transition: color 0.2s;
+}
+
+/* Lien actif et hover */
+.at-nav .nav-link:hover,
+.at-nav .nav-link.active {
+  color: var(--gold) !important;
+}
+
+/* Icône hamburger mobile */
+.at-nav .navbar-toggler {
+  border-color: rgba(255, 255, 255, 0.3);
+}
+.at-nav .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255,255,255,.7%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+/* Bouton CTA dans la navbar */
+.btn-nav-cta {
+  background: var(--terra);
+  color: var(--white) ;
+  border-radius: 50px ;
+  padding: 0.45rem 1.2rem ;
+  font-weight: 600;
+  font-size: 0.85rem ;
+  transition: background 0.2s;
+}
+.btn-nav-cta:hover {
+  background: var(--terra-dark);
+  color: var(--white);
+}
+
+
+/* ═══ 5. BOUTONS ═══ */
+
+.btn-terra {
+  background: var(--terra);
+  color: var(--white);
+  border: none;
+  border-radius: 50px;
+  padding: 0.7rem 1.8rem;
+  font-family: var(--font-corps);
+  font-weight: 700;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.15s;
+  display: inline-block;
+  text-decoration: none;
+}
+.btn-terra:hover {
+  background: var(--terra-dark);
+  color: var(--white);
+  transform: translateY(-1px);
+}
+
+.btn-outline-terra {
+  background: transparent;
+  color: var(--terra);
+  border: 2px solid var(--terra);
+  border-radius: 50px;
+  padding: 0.65rem 1.75rem;
+  font-family: var(--font-corps);
+  font-weight: 700;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: all 0.2s;
+  display: inline-block;
+  text-decoration: none;
+}
+.btn-outline-terra:hover {
+  background: var(--terra);
+  color: var(--white);
+}
+
+.btn-gold {
+  background: var(--gold);
+  color: var(--charcoal);
+  border: none;
+  border-radius: 50px;
+  padding: 0.7rem 1.8rem;
+  font-family: var(--font-corps);
+  font-weight: 700;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.15s;
+  display: inline-block;
+  text-decoration: none;
+}
+.btn-gold:hover {
+  background: var(--gold-light);
+  color: var(--charcoal);
+  transform: translateY(-1px);
+}
+
+
+/* ═══ 6. UTILITAIRES ═══ */
+
+/* Label de section */
+.section-label {
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--terra);
+  margin-bottom: 0.5rem;
+  display: block;
+}
+
+/* Badge */
+.at-badge {
+  display: inline-block;
+  background: rgba(224, 91, 43, 0.12);
+  color: var(--terra);
+  border-radius: 50px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 0.3rem 0.85rem;
+  letter-spacing: 0.05em;
+}
+
+/* Étoiles */
+.stars {
+  color: var(--gold);
+  font-size: 0.85rem;
+  letter-spacing: 1px;
+}
+
+/* Avatar cercle */
+.avatar-circle {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-titre);
+  font-weight: 700;
+  font-size: 1.1rem;
+  flex-shrink: 0;
+}
+
+/* Carte de base */
+.at-card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1.5rem;
+  transition: box-shadow 0.25s, transform 0.25s;
+}
+.at-card:hover {
+  box-shadow: var(--shadow-lg);
+  transform: translateY(-3px);
+}
+
+/* Animation fade-up au scroll */
+.fade-up {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.55s ease, transform 0.55s ease;
+}
+.fade-up.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Carte Google Maps */
+.map-wrapper {
+  border-radius: 20px;
+  overflow: hidden;
+  border: 1.5px solid var(--border);
+  box-shadow: var(--shadow);
+}
+
+
+/* ═══ 7. FOOTER ═══ */
+
+.at-footer {
+  background: var(--charcoal);
+  color: rgba(255, 255, 255, 0.7);
+  padding: 4rem 0 2rem;
+}
+.at-footer h5 {
+  font-family: var(--font-titre);
+  color: var(--white);
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+.at-footer a {
+  color: rgba(255, 255, 255, 0.6);
+  text-decoration: none;
+  font-size: 0.875rem;
+  display: block;
+  margin-bottom: 0.4rem;
+  transition: color 0.2s;
+}
+.at-footer a:hover {
+  color: var(--gold);
+}
+.at-footer-brand {
+  font-family: var(--font-titre);
+  font-weight: 700;
+  font-size: 1.6rem;
+  color: var(--white);
+}
+.at-footer-brand span {
+  color: var(--gold);
+}
+.at-footer-bottom {
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  margin-top: 3rem;
+  padding-top: 1.5rem;
+  font-size: 0.8rem;
+  color: rgba(255, 255, 255, 0.4);
+}
+.py-5 .contact-form-card{
+   background-image:var(--img-contact);
+    background-size: cover;
+  background-position: center;
+  min-height: 500px;
+    color: var(--text);
+
+}
+ 
