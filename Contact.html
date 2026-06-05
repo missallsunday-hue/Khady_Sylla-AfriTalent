@@ -11,7 +11,7 @@ rel="stylesheet">
 </head>
 <body>
     
- <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+ <nav class="navbar navbar-expand-lg navbar-dark bg-danger">
  <div class="container">
  <a class="navbar-brand" href="index.html">AfriTalent</a>
  <button class="navbar-toggler" type="button"
@@ -50,29 +50,41 @@ talents</a>
  </div>
  </section>
  <!-- ═══ SECTION FORMULAIRE ═══ -->
-<section class="py-5">
+<section class="py-5 bg-danger" >
   <div class="container">
     <div class="row justify-content-center">
       <div class="col-lg-8">
         <div class="contact-form-card">
 
           <!-- Titre -->
-          <h2 style="font-size: 1.5rem; margin-bottom: 0.4rem;">
+          <h2 style="font-family: var(--font-titre);
+                      font-size: 1.8rem; 
+                      margin-bottom: 0.4rem;">
             Envoyez-nous un message
           </h2>
-          <p style="color: var(--text-muted); font-size: 0.875rem; 
+          <p style="color: var(--text-muted); 
+                     font-size: 0.875rem; 
                      margin-bottom: 2rem;">
             Tous les champs marqués d'un * sont obligatoires.
           </p>
 
-          <!-- Message succès -->
-          <div class="success-message" id="successMessage">
-            <div style="font-size: 2rem; margin-bottom: 0.5rem;">✅</div>
-            <h4 style="font-size: 1rem; margin-bottom: 0.25rem;">
+          <!-- ✅ Message succès CACHÉ par défaut -->
+          <div id="successMessage" 
+               style="display: none;
+                      background: #f0fdf4;
+                      border: 1.5px solid #86efac;
+                      border-radius: var(--radius);
+                      padding: 2rem;
+                      text-align: center;
+                      margin-bottom: 1.5rem;">
+            <div style="font-size: 2.5rem; margin-bottom: 0.5rem;">
+              ✅
+            </div>
+            <h4 style="font-size: 1rem; margin-bottom: 0.25rem;
+                        color: #15803d;">
               Message envoyé avec succès !
             </h4>
-            <p style="font-size: 0.85rem; color: var(--text-muted); 
-                       margin: 0;">
+            <p style="font-size: 0.85rem; color: #16a34a; margin: 0;">
               Notre équipe vous répondra dans les 24h. Merci !
             </p>
           </div>
@@ -83,75 +95,138 @@ talents</a>
 
               <!-- Prénom -->
               <div class="col-md-6">
-                <div class="at-form-group">
-                  <label class="at-form-label" for="prenom">
-                    Prénom *
-                  </label>
-                  <input type="text" 
-                         class="at-form-control" 
-                         id="prenom" 
-                         placeholder="Ex: Meryem">
-                  <div class="at-form-error" id="err-prenom">
-                    Le prénom est requis (min. 2 caractères).
-                  </div>
+                <label style="font-weight: 600; 
+                               font-size: 0.85rem; 
+                               margin-bottom: 0.4rem;
+                               display: block;">
+                  Prénom *
+                </label>
+                <input type="text" 
+                       id="prenom"
+                       placeholder="Ex: Meryem"
+                       style="width: 100%;
+                              padding: 0.75rem 1rem;
+                              border: 1.5px solid var(--border);
+                              border-radius: var(--radius-sm);
+                              font-family: var(--font-corps);
+                              font-size: 0.9rem;
+                              outline: none;
+                              transition: border-color 0.2s;">
+                <div id="err-prenom" 
+                     style="display: none;
+                            color: #dc2626; 
+                            font-size: 0.78rem; 
+                            margin-top: 0.3rem;">
+                  ⚠️ Le prénom est requis (min. 2 caractères).
                 </div>
               </div>
 
               <!-- Nom -->
               <div class="col-md-6">
-                <div class="at-form-group">
-                  <label class="at-form-label" for="nom">
-                    Nom *
-                  </label>
-                  <input type="text" 
-                         class="at-form-control" 
-                         id="nom" 
-                         placeholder="Ex: Koné">
-                  <div class="at-form-error" id="err-nom">
-                    Le nom est requis (min. 2 caractères).
-                  </div>
+                <label style="font-weight: 600; 
+                               font-size: 0.85rem; 
+                               margin-bottom: 0.4rem;
+                               display: block;">
+                  Nom *
+                </label>
+                <input type="text" 
+                       id="nom"
+                       placeholder="Ex: Koné"
+                       style="width: 100%;
+                              padding: 0.75rem 1rem;
+                              border: 1.5px solid var(--border);
+                              border-radius: var(--radius-sm);
+                              font-family: var(--font-corps);
+                              font-size: 0.9rem;
+                              outline: none;
+                              transition: border-color 0.2s;">
+                <div id="err-nom" 
+                     style="display: none;
+                            color: #dc2626; 
+                            font-size: 0.78rem; 
+                            margin-top: 0.3rem;">
+                  ⚠️ Le nom est requis (min. 2 caractères).
                 </div>
               </div>
 
             </div>
 
             <!-- Email -->
-            <div class="at-form-group">
-              <label class="at-form-label" for="email">
+            <div style="margin-top: 1.25rem;">
+              <label style="font-weight: 600; 
+                             font-size: 0.85rem; 
+                             margin-bottom: 0.4rem;
+                             display: block;">
                 Adresse email *
               </label>
               <input type="email" 
-                     class="at-form-control" 
-                     id="email" 
-                     placeholder="exemple@email.com">
-              <div class="at-form-error" id="err-email">
-                Veuillez saisir une adresse email valide.
+                     id="email"
+                     placeholder="exemple@email.com"
+                     style="width: 100%;
+                            padding: 0.75rem 1rem;
+                            border: 1.5px solid var(--border);
+                            border-radius: var(--radius-sm);
+                            font-family: var(--font-corps);
+                            font-size: 0.9rem;
+                            outline: none;
+                            transition: border-color 0.2s;">
+              <div id="err-email" 
+                   style="display: none;
+                          color: #dc2626; 
+                          font-size: 0.78rem; 
+                          margin-top: 0.3rem;">
+                ⚠️ Veuillez saisir une adresse email valide.
               </div>
             </div>
 
             <!-- Téléphone -->
-            <div class="at-form-group">
-              <label class="at-form-label" for="telephone">
+            <div style="margin-top: 1.25rem;">
+              <label style="font-weight: 600; 
+                             font-size: 0.85rem; 
+                             margin-bottom: 0.4rem;
+                             display: block;">
                 Téléphone
               </label>
               <input type="tel" 
-                     class="at-form-control" 
-                     id="telephone" 
-                     placeholder="+225 01 00 00 00 00">
-              <div class="at-form-error" id="err-telephone">
-                Format invalide. Exemple : +225 01 00 00 00 00
+                     id="telephone"
+                     placeholder="+225 01 00 00 00 00"
+                     style="width: 100%;
+                            padding: 0.75rem 1rem;
+                            border: 1.5px solid var(--border);
+                            border-radius: var(--radius-sm);
+                            font-family: var(--font-corps);
+                            font-size: 0.9rem;
+                            outline: none;
+                            transition: border-color 0.2s;">
+              <div id="err-telephone" 
+                   style="display: none;
+                          color: #dc2626; 
+                          font-size: 0.78rem; 
+                          margin-top: 0.3rem;">
+                ⚠️ Format invalide. Exemple : +225 01 00 00 00 00
               </div>
             </div>
 
             <!-- Profil -->
-            <div class="at-form-group">
-              <label class="at-form-label" for="profil">
+            <div style="margin-top: 1.25rem;">
+              <label style="font-weight: 600; 
+                             font-size: 0.85rem; 
+                             margin-bottom: 0.4rem;
+                             display: block;">
                 Vous êtes *
               </label>
-              <select class="at-form-control" id="profil">
-                <option value="">
-                  — Sélectionnez votre profil —
-                </option>
+              <select id="profil"
+                      style="width: 100%;
+                             padding: 0.75rem 1rem;
+                             border: 1.5px solid var(--border);
+                             border-radius: var(--radius-sm);
+                             font-family: var(--font-corps);
+                             font-size: 0.9rem;
+                             outline: none;
+                             cursor: pointer;
+                             background: white;
+                             transition: border-color 0.2s;">
+                <option value="">— Sélectionnez votre profil —</option>
                 <option value="entreprise">
                   Une entreprise cherchant des talents
                 </option>
@@ -161,82 +236,129 @@ talents</a>
                 <option value="investisseur">
                   Un investisseur / partenaire
                 </option>
-                <option value="presse">
-                  Presse / Médias
-                </option>
+                <option value="presse">Presse / Médias</option>
                 <option value="autre">Autre</option>
               </select>
-              <div class="at-form-error" id="err-profil">
-                Veuillez sélectionner votre profil.
+              <div id="err-profil" 
+                   style="display: none;
+                          color: #dc2626; 
+                          font-size: 0.78rem; 
+                          margin-top: 0.3rem;">
+                ⚠️ Veuillez sélectionner votre profil.
               </div>
             </div>
 
             <!-- Sujet -->
-            <div class="at-form-group">
-              <label class="at-form-label" for="sujet">
+            <div style="margin-top: 1.25rem;">
+              <label style="font-weight: 600; 
+                             font-size: 0.85rem; 
+                             margin-bottom: 0.4rem;
+                             display: block;">
                 Sujet *
               </label>
               <input type="text" 
-                     class="at-form-control" 
-                     id="sujet" 
-                     placeholder="Résumez votre demande en quelques mots">
-              <div class="at-form-error" id="err-sujet">
-                Le sujet est requis (min. 5 caractères).
+                     id="sujet"
+                     placeholder="Résumez votre demande en quelques mots"
+                     style="width: 100%;
+                            padding: 0.75rem 1rem;
+                            border: 1.5px solid var(--border);
+                            border-radius: var(--radius-sm);
+                            font-family: var(--font-corps);
+                            font-size: 0.9rem;
+                            outline: none;
+                            transition: border-color 0.2s;">
+              <div id="err-sujet" 
+                   style="display: none;
+                          color: #dc2626; 
+                          font-size: 0.78rem; 
+                          margin-top: 0.3rem;">
+                ⚠️ Le sujet est requis (min. 5 caractères).
               </div>
             </div>
 
             <!-- Message -->
-            <div class="at-form-group">
-              <label class="at-form-label" for="message">
+            <div style="margin-top: 1.25rem;">
+              <label style="font-weight: 600; 
+                             font-size: 0.85rem; 
+                             margin-bottom: 0.4rem;
+                             display: block;">
                 Message *
               </label>
-              <textarea class="at-form-control" 
-                        id="message" 
-                        rows="5" 
+              <textarea id="message"
+                        rows="5"
                         maxlength="1000"
-                        placeholder="Décrivez votre projet..."
-                        style="resize: vertical;">
+                        placeholder="Décrivez votre projet, vos besoins..."
+                        style="width: 100%;
+                               padding: 0.75rem 1rem;
+                               border: 1.5px solid var(--border);
+                               border-radius: var(--radius-sm);
+                               font-family: var(--font-corps);
+                               font-size: 0.9rem;
+                               outline: none;
+                               resize: vertical;
+                               transition: border-color 0.2s;">
               </textarea>
-              <div class="char-count">
+              <div style="text-align: right; 
+                           font-size: 0.75rem; 
+                           color: var(--text-muted);
+                           margin-top: 0.2rem;">
                 <span id="charCount">0</span>/1000 caractères
               </div>
-              <div class="at-form-error" id="err-message">
-                Le message est requis (min. 20 caractères).
+              <div id="err-message" 
+                   style="display: none;
+                          color: #dc2626; 
+                          font-size: 0.78rem; 
+                          margin-top: 0.3rem;">
+                ⚠️ Le message est requis (min. 20 caractères).
               </div>
             </div>
 
             <!-- RGPD -->
-            <div class="at-form-group">
-              <div style="display: flex; align-items: flex-start; 
-                           gap: 0.75rem;">
-                <input type="checkbox" 
-                       id="rgpd" 
-                       style="margin-top: 3px; 
-                              accent-color: var(--terra);
-                              width: 16px; height: 16px; 
-                              cursor: pointer;">
-                <label for="rgpd" 
-                       style="font-size: 0.82rem; 
-                              color: var(--text-muted); 
-                              cursor: pointer;">
-                  J'accepte que mes données soient traitées 
-                  par AfriTalent. 
-                  <a href="#" style="color: var(--terra);">
-                    Politique de confidentialité
-                  </a> *
-                </label>
-              </div>
-              <div class="at-form-error" id="err-rgpd">
-                Vous devez accepter la politique de confidentialité.
-              </div>
+            <div style="margin-top: 1.25rem; 
+                         display: flex; 
+                         align-items: flex-start; 
+                         gap: 0.75rem;">
+              <input type="checkbox" 
+                     id="rgpd"
+                     style="margin-top: 3px;
+                            accent-color: var(--terra);
+                            width: 16px; 
+                            height: 16px; 
+                            cursor: pointer;
+                            flex-shrink: 0;">
+              <label for="rgpd" 
+                     style="font-size: 0.82rem; 
+                            color: var(--text-muted); 
+                            cursor: pointer;">
+                J'accepte que mes données soient traitées par AfriTalent.
+                <a href="#" style="color: var(--terra);">
+                  Politique de confidentialité
+                </a> *
+              </label>
+            </div>
+            <div id="err-rgpd" 
+                 style="display: none;
+                        color: #dc2626; 
+                        font-size: 0.78rem; 
+                        margin-top: 0.3rem;">
+              ⚠️ Vous devez accepter la politique de confidentialité.
             </div>
 
             <!-- Bouton envoyer -->
             <button type="submit" 
-                    class="btn-terra w-100" 
                     id="submitBtn"
-                    style="border-radius: var(--radius-sm); 
-                           padding: 1rem;">
+                    style="width: 100%;
+                           margin-top: 1.5rem;
+                           padding: 1rem;
+                           background: var(--terra);
+                           color: white;
+                           border: none;
+                           border-radius: var(--radius-sm);
+                           font-family: var(--font-corps);
+                           font-weight: 700;
+                           font-size: 1rem;
+                           cursor: pointer;
+                           transition: background 0.2s;">
               Envoyer le message →
             </button>
 
@@ -246,7 +368,6 @@ talents</a>
     </div>
   </div>
 </section>
- </main>
 
  <!-- ═══ SECTION LOCALISATION ═══ -->
 <section class="py-5" style="background: var(--cream);">
@@ -284,8 +405,8 @@ talents</a>
   </div>
 </section>
  <!-- Pied de page -->
-  <footer>
- <div class="container py-4">
+   <footer>
+ <div class="footer-expand-lg py-4 bg-dark">
  <p>&copy; 2025 AfriTalent. Tous droits reserves.</p>
  </div>
  </footer>
