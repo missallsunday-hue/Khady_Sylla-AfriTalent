@@ -110,3 +110,22 @@ document.addEventListener('DOMContentLoaded', function() {
   }
 
 });
+
+// ═══ FADE-IN AU SCROLL ═══
+const fadeElements = document.querySelectorAll(
+  'section, .at-card, .pricing-card, .freelance-card, .timeline-item'
+);
+
+const fadeObserver = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('fade-visible');
+      fadeObserver.unobserve(entry.target);
+    }
+  });
+}, { threshold: 0.1 });
+
+fadeElements.forEach(el => {
+  el.classList.add('fade-hidden');
+  fadeObserver.observe(el);
+});
