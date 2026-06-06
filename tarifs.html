@@ -39,186 +39,426 @@ href="contact.html">Contact</a></li>
 </nav>
 <!-- Contenu principal -->
  <main>
- <!-- Section Hero : accroche principale -->
- <section id="hero">
- <div class="container py-5">
- <h1>Des tarifs simples & transparents</h1>
- <p> Choisissez le plan adapté à votre situation. Changez ou annulez à tout moment.
-
-</p>
-
-<!-- ═══ SECTION TARIFS ═══ -->
-<section class="py-5">
+  <!-- ═══ TOGGLE MENSUEL / ANNUEL ═══ -->
+<section class="py-3" style="background: var(--cream);">
   <div class="container">
-
-    <!-- Titre -->
-    <div class="text-center mb-5">
-      <div class="section-label">Tarification</div>
-      <h2 style="font-size: 2rem;">Choisissez votre plan</h2>
-      <p style="color: var(--text-muted);">
-        Sans frais cachés. Changez de plan à tout moment.
-      </p>
-    </div>
-
-    <!-- 4 cartes -->
-    <div class="row g-4">
-
-      <!-- Carte 1 — Gratuit -->
-      <div class="col-md-6 col-lg-3">
-        <div class="pricing-card h-100">
-
-          <div class="at-badge mb-3">Démarrer</div>
-          <h3 style="font-size: 1.2rem; margin-bottom: 0.5rem;">
-            Gratuit
-          </h3>
-          <p style="color: var(--text-muted); font-size: 0.85rem; 
-                     margin-bottom: 1.25rem;">
-            Pour tester sans engagement
-          </p>
-
-          <!-- Prix -->
-          <div class="pricing-price">0 €</div>
-          <div class="pricing-period">Pour toujours gratuit</div>
-
-          <!-- Fonctionnalités -->
-          <ul class="pricing-features">
-            <li>Création de profil freelance</li>
-            <li>1 mission active</li>
-            <li>3 candidatures par semaine</li>
-            <li>Messagerie intégrée</li>
-            <li>Commission : 15%</li>
-          </ul>
-
-          <a href="contact.html" 
-             class="btn-outline-terra d-block text-center">
-            Commencer gratuitement
-          </a>
-
-        </div>
-      </div>
-
-      <!-- Carte 2 — Starter -->
-      <div class="col-md-6 col-lg-3">
-        <div class="pricing-card h-100">
-
-          <div class="at-badge mb-3">Starter</div>
-          <h3 style="font-size: 1.2rem; margin-bottom: 0.5rem;">
-            Starter
-          </h3>
-          <p style="color: var(--text-muted); font-size: 0.85rem; 
-                     margin-bottom: 1.25rem;">
-            Pour les freelances qui débutent
-          </p>
-
-          <!-- Prix -->
-          <div class="pricing-price">19 €</div>
-          <div class="pricing-period">/ mois</div>
-
-          <!-- Fonctionnalités -->
-          <ul class="pricing-features">
-            <li>5 missions actives</li>
-            <li>10 candidatures par semaine</li>
-            <li>Commission réduite : 12%</li>
-            <li>Badge Starter vérifié</li>
-            <li>Support par email</li>
-          </ul>
-
-          <a href="contact.html" 
-             class="btn-outline-terra d-block text-center">
-            Choisir Starter
-          </a>
-
-        </div>
-      </div>
-
-      <!-- Carte 3 — Pro (mise en avant) -->
-      <div class="col-md-6 col-lg-3">
-        <div class="pricing-card featured h-100">
-
-          <!-- Badge populaire -->
-          <div class="featured-badge">⭐ Le plus populaire</div>
-
-          <div class="at-badge mb-3"
-               style="background: rgba(244,166,34,0.25); 
-                      color: var(--gold);">
-            Recommandé
-          </div>
-          <h3 style="font-size: 1.2rem; margin-bottom: 0.5rem;
-                      color: var(--white);">
-            Pro
-          </h3>
-          <p style="color: rgba(255,255,255,0.6); font-size: 0.85rem; 
-                     margin-bottom: 1.25rem;">
-            Pour les freelances confirmés
-          </p>
-
-          <!-- Prix -->
-          <div class="pricing-price">49 €</div>
-          <div class="pricing-period" 
-               style="color: rgba(255,255,255,0.5);">
-            / mois
-          </div>
-
-          <!-- Fonctionnalités -->
-          <ul class="pricing-features">
-            <li>Missions illimitées</li>
-            <li>Candidatures illimitées</li>
-            <li>Commission réduite : 8%</li>
-            <li>Badge Pro Vérifié</li>
-            <li>Mise en avant profil × 3</li>
-            <li>Support prioritaire 24/7</li>
-          </ul>
-
-          <a href="contact.html" 
-             class="btn-gold d-block text-center">
-            Démarrer l'essai 14j →
-          </a>
-
-        </div>
-      </div>
-
-      <!-- Carte 4 — Entreprise -->
-      <div class="col-md-6 col-lg-3">
-        <div class="pricing-card h-100">
-
-          <div class="at-badge mb-3">Sur mesure</div>
-          <h3 style="font-size: 1.2rem; margin-bottom: 0.5rem;">
-            Entreprise
-          </h3>
-          <p style="color: var(--text-muted); font-size: 0.85rem; 
-                     margin-bottom: 1.25rem;">
-            Pour les grandes organisations
-          </p>
-
-          <!-- Prix -->
-          <div class="pricing-price">Sur devis</div>
-          <div class="pricing-period">
-            À partir de 5 utilisateurs
-          </div>
-
-          <!-- Fonctionnalités -->
-          <ul class="pricing-features">
-            <li>Tout du plan Pro</li>
-            <li>Commission dès 5%</li>
-            <li>Account Manager dédié</li>
-            <li>Intégration ATS / SIRH</li>
-            <li>SSO &amp; gestion des droits</li>
-            <li>SLA garanti 99.9%</li>
-          </ul>
-
-          <a href="contact.html" 
-             class="btn-terra d-block text-center">
-            Nous contacter
-          </a>
-
-        </div>
-      </div>
-
+    <div class="d-flex align-items-center 
+                justify-content-center gap-3">
+      <span style="font-weight: 600; font-size: 0.9rem;">
+        Mensuel
+      </span>
+      <label style="
+        position: relative;
+        width: 52px; height: 28px;
+        cursor: pointer;">
+        <input type="checkbox" 
+               id="billing-toggle"
+               style="opacity:0;width:0;height:0;">
+        <span style="
+          position: absolute; inset: 0;
+          background: var(--terra);
+          border-radius: 50px;
+          transition: 0.3s;">
+        </span>
+        <span id="toggle-dot" style="
+          position: absolute;
+          height: 22px; width: 22px;
+          left: 3px; bottom: 3px;
+          background: white;
+          border-radius: 50%;
+          transition: 0.3s;">
+        </span>
+      </label>
+      <span style="font-weight: 600; font-size: 0.9rem;">
+        Annuel
+        <span style="
+          background: var(--gold);
+          color: var(--charcoal);
+          font-size: 0.7rem;
+          font-weight: 700;
+          padding: 0.2rem 0.6rem;
+          border-radius: 50px;
+          margin-left: 0.4rem;">
+          -20%
+        </span>
+      </span>
     </div>
   </div>
 </section>
+
+
+<!-- ═══ TABLEAU COMPARATIF ═══ -->
+<section class="py-5" style="background: var(--cream);">
+  <div class="container">
+
+    <div class="text-center mb-4">
+      <div class="section-label">Comparatif</div>
+      <h2 style="
+        font-family: var(--font-titre);
+        font-size: 1.8rem;">
+        Ce qui est inclus dans chaque plan
+      </h2>
+    </div>
+
+    <div class="table-responsive">
+      <table class="table" style="min-width: 600px;">
+        <thead>
+          <tr style="border-bottom: 2px solid var(--border);">
+            <th style="
+              width: 40%;
+              font-weight: 700;
+              font-size: 0.85rem;
+              padding: 0.75rem 1rem;">
+              Fonctionnalité
+            </th>
+            <th class="text-center" style="
+              font-weight: 700;
+              font-size: 0.85rem;
+              padding: 0.75rem 1rem;">
+              Gratuit
+            </th>
+            <th class="text-center" style="
+              font-weight: 700;
+              font-size: 0.85rem;
+              padding: 0.75rem 1rem;
+              color: var(--terra);">
+              Pro ⭐
+            </th>
+            <th class="text-center" style="
+              font-weight: 700;
+              font-size: 0.85rem;
+              padding: 0.75rem 1rem;">
+              Entreprise
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr style="border-bottom: 1px solid var(--border);">
+            <td style="
+              padding: 0.65rem 1rem;
+              font-weight: 500;
+              font-size: 0.85rem;">
+              Profil freelance
+            </td>
+            <td class="text-center" style="
+              color: #16a34a;
+              font-weight: 700;">✓</td>
+            <td class="text-center" style="
+              color: #16a34a;
+              font-weight: 700;">✓</td>
+            <td class="text-center" style="
+              color: #16a34a;
+              font-weight: 700;">✓</td>
+          </tr>
+          <tr style="border-bottom: 1px solid var(--border);">
+            <td style="
+              padding: 0.65rem 1rem;
+              font-weight: 500;
+              font-size: 0.85rem;">
+              Missions actives
+            </td>
+            <td class="text-center" style="
+              font-size: 0.85rem;
+              color: var(--text-muted);">
+              1
+            </td>
+            <td class="text-center" style="
+              color: #16a34a;
+              font-weight: 700;">
+              Illimitées
+            </td>
+            <td class="text-center" style="
+              color: #16a34a;
+              font-weight: 700;">
+              Illimitées
+            </td>
+          </tr>
+          <tr style="border-bottom: 1px solid var(--border);">
+            <td style="
+              padding: 0.65rem 1rem;
+              font-weight: 500;
+              font-size: 0.85rem;">
+              Commission AfriTalent
+            </td>
+            <td class="text-center" style="
+              font-size: 0.85rem;
+              color: var(--text-muted);">
+              15%
+            </td>
+            <td class="text-center" style="
+              font-size: 0.85rem;
+              color: var(--text-muted);">
+              8%
+            </td>
+            <td class="text-center" style="
+              font-size: 0.85rem;
+              color: var(--text-muted);">
+              5% et -
+            </td>
+          </tr>
+          <tr style="border-bottom: 1px solid var(--border);">
+            <td style="
+              padding: 0.65rem 1rem;
+              font-weight: 500;
+              font-size: 0.85rem;">
+              Badge profil vérifié
+            </td>
+            <td class="text-center" style="
+              color: #9ca3af;">✗</td>
+            <td class="text-center" style="
+              color: #16a34a;
+              font-weight: 700;">✓</td>
+            <td class="text-center" style="
+              color: #16a34a;
+              font-weight: 700;">✓</td>
+          </tr>
+          <tr style="border-bottom: 1px solid var(--border);">
+            <td style="
+              padding: 0.65rem 1rem;
+              font-weight: 500;
+              font-size: 0.85rem;">
+              Support
+            </td>
+            <td class="text-center" style="
+              font-size: 0.85rem;
+              color: var(--text-muted);">
+              Email
+            </td>
+            <td class="text-center" style="
+              font-size: 0.85rem;
+              color: var(--text-muted);">
+              24/7 prioritaire
+            </td>
+            <td class="text-center" style="
+              font-size: 0.85rem;
+              color: var(--text-muted);">
+              Manager dédié
+            </td>
+          </tr>
+          <tr style="border-bottom: 1px solid var(--border);">
+            <td style="
+              padding: 0.65rem 1rem;
+              font-weight: 500;
+              font-size: 0.85rem;">
+              Intégration ATS/SIRH
+            </td>
+            <td class="text-center" style="
+              color: #9ca3af;">✗</td>
+            <td class="text-center" style="
+              color: #9ca3af;">✗</td>
+            <td class="text-center" style="
+              color: #16a34a;
+              font-weight: 700;">✓</td>
+          </tr>
+          <tr>
+            <td style="
+              padding: 0.65rem 1rem;
+              font-weight: 500;
+              font-size: 0.85rem;">
+              SSO Entreprise
+            </td>
+            <td class="text-center" style="
+              color: #9ca3af;">✗</td>
+            <td class="text-center" style="
+              color: #9ca3af;">✗</td>
+            <td class="text-center" style="
+              color: #16a34a;
+              font-weight: 700;">✓</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+  </div>
 </section>
- </main>
+
+
+<!-- ═══ FAQ ACCORDION ═══ -->
+<section class="py-5">
+  <div class="container">
+
+    <div class="text-center mb-5">
+      <div class="section-label">FAQ</div>
+      <h2 style="
+        font-family: var(--font-titre);
+        font-size: 1.8rem;">
+        Questions fréquentes
+      </h2>
+    </div>
+
+    <div class="row justify-content-center">
+      <div class="col-lg-8">
+        <div class="accordion at-accordion" 
+             id="faqAccordion">
+
+          <!-- Question 1 -->
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button class="accordion-button" 
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#faq1">
+                Comment fonctionne la commission ?
+              </button>
+            </h2>
+            <div id="faq1" 
+                 class="accordion-collapse collapse show"
+                 data-bs-parent="#faqAccordion">
+              <div class="accordion-body" style="
+                font-size: 0.9rem;
+                color: var(--text-muted);">
+                AfriTalent prélève une commission sur chaque 
+                mission réalisée. En plan Gratuit : 15%, 
+                en plan Pro : 8%, en Entreprise : négociée 
+                à partir de 5%. Elle est prélevée 
+                automatiquement à la validation de la mission.
+              </div>
+            </div>
+          </div>
+
+          <!-- Question 2 -->
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#faq2">
+                Puis-je changer de plan à tout moment ?
+              </button>
+            </h2>
+            <div id="faq2"
+                 class="accordion-collapse collapse"
+                 data-bs-parent="#faqAccordion">
+              <div class="accordion-body" style="
+                font-size: 0.9rem;
+                color: var(--text-muted);">
+                Oui, vous pouvez upgrader ou downgrader 
+                votre plan à tout moment depuis votre 
+                tableau de bord. En cas d'upgrade, 
+                la facturation est proratisée. 
+                Le downgrade prend effet au début 
+                de la prochaine période.
+              </div>
+            </div>
+          </div>
+
+          <!-- Question 3 -->
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#faq3">
+                Comment fonctionne la garantie paiement ?
+              </button>
+            </h2>
+            <div id="faq3"
+                 class="accordion-collapse collapse"
+                 data-bs-parent="#faqAccordion">
+              <div class="accordion-body" style="
+                font-size: 0.9rem;
+                color: var(--text-muted);">
+                Dès la signature du contrat, le montant 
+                est mis en séquestre. À la livraison 
+                et validation par le client, les fonds 
+                sont libérés sous 5 jours ouvrés. 
+                En cas de litige, notre équipe intervient 
+                sous 48h.
+              </div>
+            </div>
+          </div>
+
+          <!-- Question 4 -->
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#faq4">
+                Quels modes de paiement acceptez-vous ?
+              </button>
+            </h2>
+            <div id="faq4"
+                 class="accordion-collapse collapse"
+                 data-bs-parent="#faqAccordion">
+              <div class="accordion-body" style="
+                font-size: 0.9rem;
+                color: var(--text-muted);">
+                Nous acceptons les cartes bancaires 
+                (Visa, Mastercard), les virements SEPA 
+                et les solutions Mobile Money 
+                (Orange Money, MTN Money, Wave). 
+                Les paiements sont sécurisés par Stripe, 
+                certifié PCI-DSS niveau 1.
+              </div>
+            </div>
+          </div>
+
+          <!-- Question 5 -->
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#faq5">
+                Que faire si je ne suis pas satisfait ?
+              </button>
+            </h2>
+            <div id="faq5"
+                 class="accordion-collapse collapse"
+                 data-bs-parent="#faqAccordion">
+              <div class="accordion-body" style="
+                font-size: 0.9rem;
+                color: var(--text-muted);">
+                Nous offrons une garantie satisfaction 
+                sur les 7 premiers jours de chaque mission. 
+                Si vous n'êtes pas satisfait, nous vous 
+                proposons gratuitement un remplacement 
+                parmi nos talents disponibles.
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══ CTA FINAL ═══ -->
+<section style="
+  background: var(--terra);
+  padding: 4rem 0;">
+  <div class="container text-center">
+    <h2 style="
+      font-family: var(--font-titre);
+      color: var(--white);
+      font-size: 1.8rem;
+      margin-bottom: 0.75rem;">
+      Encore des questions ?
+    </h2>
+    <p style="
+      color: rgba(255,255,255,0.8);
+      margin-bottom: 2rem;">
+      Notre équipe est disponible pour vous accompagner.
+    </p>
+    <div class="d-flex gap-3 justify-content-center 
+                flex-wrap">
+      <a href="contact.html" 
+         class="btn-gold">
+        Parler à un conseiller →
+      </a>
+      <a href="freelances.html" 
+         class="btn-outline-terra"
+         style="
+           border-color: rgba(255,255,255,0.4);
+           color: var(--white);">
+        Voir les freelances
+      </a>
+    </div>
+  </div>
+</section>
  <footer>
  <div class="footer-expand-lg py-4 bg-dark">
  <p>&copy; 2025 AfriTalent. Tous droits reserves.</p>

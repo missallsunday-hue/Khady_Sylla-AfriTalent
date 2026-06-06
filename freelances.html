@@ -36,41 +36,558 @@ href="contact.html">Contact</a></li>
  </div>
  </div>
 </nav>
- <!-- Contenu principal -->
- <main>
- <!-- Section Hero : accroche principale -->
- <section id="hero">
- <div class="container py-5">
- <h1> 8500+ talents tech verifies</h1>
- <p>Trouvez le freelance idéal pour votre projet parmi nos experts certifiés.</p>
-  <!-- ═══ SECTION COMMENTAIRES ═══ -->
+<main>
+
+<!-- ═══ HERO ═══ -->
+<section id="hero" style="
+  background: var(--charcoal);
+  padding: 5rem 0;
+  text-align: center;">
+  <div class="container">
+    <div class="at-badge mb-3">🌍 Catalogue Freelances</div>
+    <h1 style="
+      font-family: var(--font-titre);
+      color: var(--white);
+      font-size: clamp(1.8rem, 4vw, 3rem);
+      margin-bottom: 1rem;">
+      8 500+ talents tech vérifiés
+    </h1>
+    <p style="
+      color: rgba(255,255,255,0.7);
+      max-width: 500px;
+      margin: 0 auto;
+      font-size: 1rem;">
+      Trouvez le freelance idéal pour votre projet
+      parmi nos experts certifiés.
+    </p>
+  </div>
+</section>
+
+
+<!-- ═══ FILTRES + GRILLE FREELANCES ═══ -->
+<section class="py-5">
+  <div class="container">
+
+    <!-- Barre filtres + recherche -->
+    <div style="
+      background: var(--white);
+      border: 1.5px solid var(--border);
+      border-radius: var(--radius);
+      padding: 1.25rem 1.5rem;
+      margin-bottom: 2rem;
+      box-shadow: var(--shadow);">
+
+      <div class="d-flex flex-column flex-md-row
+                  justify-content-between
+                  align-items-md-center gap-3">
+
+        <!-- Filtres -->
+        <div style="display:flex;flex-wrap:wrap;gap:0.4rem;">
+          <button class="filter-btn active"
+                  data-filter="tous">
+            🌍 Tous
+          </button>
+          <button class="filter-btn" data-filter="dev">
+            💻 Dev
+          </button>
+          <button class="filter-btn" data-filter="design">
+            🎨 Design
+          </button>
+          <button class="filter-btn" data-filter="data">
+            📊 Data
+          </button>
+          <button class="filter-btn" data-filter="mobile">
+            📱 Mobile
+          </button>
+          <button class="filter-btn" data-filter="devops">
+            ⚙️ DevOps
+          </button>
+        </div>
+
+        <!-- Compteur + Recherche -->
+        <div class="d-flex align-items-center gap-2">
+          <span id="result-count" style="
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            font-weight: 500;
+            white-space: nowrap;">
+            9 profils
+          </span>
+          <input type="text"
+                 id="search-input"
+                 placeholder="🔍 Rechercher..."
+                 style="
+                   border: 1.5px solid var(--border);
+                   border-radius: 50px;
+                   padding: 0.5rem 1rem;
+                   font-family: var(--font-corps);
+                   font-size: 0.85rem;
+                   outline: none;
+                   width: 200px;
+                   transition: border-color 0.2s;">
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Grille freelances -->
+    <div class="row g-4" id="freelance-grid">
+
+      <!-- Carte 1 — Dev -->
+      <div class="col-md-6 col-lg-4 fl-item"
+           data-cat="dev"
+           data-name="ama kofi react node">
+        <div class="freelance-card">
+          <div class="fl-top">
+            <div class="fl-avatar"
+                 style="background:#fde8df;
+                        color:var(--terra);">
+              AK
+            </div>
+            <div>
+              <div class="fl-name">Ama Kofi</div>
+              <div class="fl-role">Full-Stack Developer</div>
+              <div class="fl-country">🇬🇭 Ghana · Remote</div>
+            </div>
+          </div>
+          <div class="stars mb-2">★★★★★
+            <span style="font-size:0.75rem;
+                         color:var(--text-muted);">
+              (58 avis)
+            </span>
+          </div>
+          <p class="fl-bio">
+            8 ans d'expérience en développement web.
+            Spécialisée React, Node.js et microservices.
+          </p>
+          <div class="mb-2">
+            <span class="skill-tag">React</span>
+            <span class="skill-tag">Node.js</span>
+            <span class="skill-tag">TypeScript</span>
+          </div>
+          <div class="fl-footer">
+            <div class="fl-tjm">650 €/jour</div>
+            <div class="fl-avail">
+              <div class="fl-avail-dot"></div>
+              Disponible
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Carte 2 — Data -->
+      <div class="col-md-6 col-lg-4 fl-item"
+           data-cat="data"
+           data-name="mohamed bah python data">
+        <div class="freelance-card">
+          <div class="fl-top">
+            <div class="fl-avatar"
+                 style="background:#fef9e5;
+                        color:#a06a00;">
+              MB
+            </div>
+            <div>
+              <div class="fl-name">Mohamed Bah</div>
+              <div class="fl-role">Data Scientist</div>
+              <div class="fl-country">🇸🇳 Sénégal · Remote</div>
+            </div>
+          </div>
+          <div class="stars mb-2">★★★★★
+            <span style="font-size:0.75rem;
+                         color:var(--text-muted);">
+              (42 avis)
+            </span>
+          </div>
+          <p class="fl-bio">
+            Expert en machine learning et données massives.
+            Diplômé de l'École Polytechnique de Dakar.
+          </p>
+          <div class="mb-2">
+            <span class="skill-tag">Python</span>
+            <span class="skill-tag">TensorFlow</span>
+            <span class="skill-tag">Spark</span>
+          </div>
+          <div class="fl-footer">
+            <div class="fl-tjm">720 €/jour</div>
+            <div class="fl-avail">
+              <div class="fl-avail-dot"></div>
+              Disponible
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Carte 3 — Design -->
+      <div class="col-md-6 col-lg-4 fl-item"
+           data-cat="design"
+           data-name="fatima ouedraogo ux design figma">
+        <div class="freelance-card">
+          <div class="fl-top">
+            <div class="fl-avatar"
+                 style="background:#e8f8ed;
+                        color:#15803d;">
+              FO
+            </div>
+            <div>
+              <div class="fl-name">Fatima Ouédraogo</div>
+              <div class="fl-role">UX/UI Designer</div>
+              <div class="fl-country">
+                🇧🇫 Burkina Faso · Remote
+              </div>
+            </div>
+          </div>
+          <div class="stars mb-2">★★★★★
+            <span style="font-size:0.75rem;
+                         color:var(--text-muted);">
+              (35 avis)
+            </span>
+          </div>
+          <p class="fl-bio">
+            Designer produit primée au African Design
+            Awards 2023. Interfaces belles et accessibles.
+          </p>
+          <div class="mb-2">
+            <span class="skill-tag">Figma</span>
+            <span class="skill-tag">Design System</span>
+            <span class="skill-tag">Prototypage</span>
+          </div>
+          <div class="fl-footer">
+            <div class="fl-tjm">480 €/jour</div>
+            <div class="fl-avail">
+              <div class="fl-avail-dot"></div>
+              Disponible
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Carte 4 — DevOps -->
+      <div class="col-md-6 col-lg-4 fl-item"
+           data-cat="devops"
+           data-name="seun dlamini devops cloud kubernetes">
+        <div class="freelance-card">
+          <div class="fl-top">
+            <div class="fl-avatar"
+                 style="background:#ede9fe;
+                        color:#6d28d9;">
+              SD
+            </div>
+            <div>
+              <div class="fl-name">Seun Dlamini</div>
+              <div class="fl-role">DevOps / Cloud</div>
+              <div class="fl-country">
+                🇿🇦 Afrique du Sud · Remote
+              </div>
+            </div>
+          </div>
+          <div class="stars mb-2">★★★★★
+            <span style="font-size:0.75rem;
+                         color:var(--text-muted);">
+              (71 avis)
+            </span>
+          </div>
+          <p class="fl-bio">
+            Architecte cloud certifié AWS & GCP.
+            10 ans d'expérience en infrastructure.
+          </p>
+          <div class="mb-2">
+            <span class="skill-tag">Kubernetes</span>
+            <span class="skill-tag">Terraform</span>
+            <span class="skill-tag">AWS</span>
+          </div>
+          <div class="fl-footer">
+            <div class="fl-tjm">800 €/jour</div>
+            <div class="fl-avail busy">
+              <div class="fl-avail-dot"></div>
+              Disponible 15 fév.
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Carte 5 — DevOps -->
+      <div class="col-md-6 col-lg-4 fl-item"
+           data-cat="devops"
+           data-name="ibrahim toure devops securite mali">
+        <div class="freelance-card">
+          <div class="fl-top">
+            <div class="fl-avatar"
+                 style="background:#fce7f3;
+                        color:#be185d;">
+              IT
+            </div>
+            <div>
+              <div class="fl-name">Ibrahim Touré</div>
+              <div class="fl-role">DevOps / Cybersécurité</div>
+              <div class="fl-country">
+                🇲🇱 Mali · Bamako/Remote
+              </div>
+            </div>
+          </div>
+          <div class="stars mb-2">★★★★☆
+            <span style="font-size:0.75rem;
+                         color:var(--text-muted);">
+              (19 avis)
+            </span>
+          </div>
+          <p class="fl-bio">
+            Expert en sécurité des infrastructures cloud.
+            Conformité RGPD et protection cybermenaces.
+          </p>
+          <div class="mb-2">
+            <span class="skill-tag">Linux</span>
+            <span class="skill-tag">Ansible</span>
+            <span class="skill-tag">Pentest</span>
+          </div>
+          <div class="fl-footer">
+            <div class="fl-tjm">550 €/jour</div>
+            <div class="fl-avail">
+              <div class="fl-avail-dot"></div>
+              Disponible
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Carte 6 — Mobile -->
+      <div class="col-md-6 col-lg-4 fl-item"
+           data-cat="mobile"
+           data-name="ada eze ios swift nigeria">
+        <div class="freelance-card">
+          <div class="fl-top">
+            <div class="fl-avatar"
+                 style="background:#e0f2fe;
+                        color:#0c4a6e;">
+              AE
+            </div>
+            <div>
+              <div class="fl-name">Ada Eze</div>
+              <div class="fl-role">iOS Developer · Swift</div>
+              <div class="fl-country">
+                🇳🇬 Nigeria · Remote
+              </div>
+            </div>
+          </div>
+          <div class="stars mb-2">★★★★★
+            <span style="font-size:0.75rem;
+                         color:var(--text-muted);">
+              (26 avis)
+            </span>
+          </div>
+          <p class="fl-bio">
+            Développeuse iOS native depuis 6 ans.
+            Apps parmi les mieux notées de l'App Store.
+          </p>
+          <div class="mb-2">
+            <span class="skill-tag">Swift</span>
+            <span class="skill-tag">SwiftUI</span>
+            <span class="skill-tag">CoreML</span>
+          </div>
+          <div class="fl-footer">
+            <div class="fl-tjm">610 €/jour</div>
+            <div class="fl-avail">
+              <div class="fl-avail-dot"></div>
+              Disponible
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Carte 7 — Mobile -->
+      <div class="col-md-6 col-lg-4 fl-item"
+           data-cat="mobile"
+           data-name="ussey yemen flutter mobile niger">
+        <div class="freelance-card">
+          <div class="fl-top">
+            <div class="fl-avatar"
+                 style="background:#fef9e5;
+                        color:#a06a00;">
+              UY
+            </div>
+            <div>
+              <div class="fl-name">Ussey Yemen</div>
+              <div class="fl-role">Mobile Developer</div>
+              <div class="fl-country">
+                🇳🇪 Niger · Remote
+              </div>
+            </div>
+          </div>
+          <div class="stars mb-2">★★★★☆
+            <span style="font-size:0.75rem;
+                         color:var(--text-muted);">
+              (11 avis)
+            </span>
+          </div>
+          <p class="fl-bio">
+            Développeur Flutter spécialisé dans les
+            applications fintech pour l'Afrique de l'Ouest.
+          </p>
+          <div class="mb-2">
+            <span class="skill-tag">Flutter</span>
+            <span class="skill-tag">Dart</span>
+            <span class="skill-tag">Firebase</span>
+          </div>
+          <div class="fl-footer">
+            <div class="fl-tjm">420 €/jour</div>
+            <div class="fl-avail">
+              <div class="fl-avail-dot"></div>
+              Disponible
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Carte 8 — Dev -->
+      <div class="col-md-6 col-lg-4 fl-item"
+           data-cat="dev"
+           data-name="fambay ka frontend react senegal">
+        <div class="freelance-card">
+          <div class="fl-top">
+            <div class="fl-avatar"
+                 style="background:#dcfce7;
+                        color:#15803d;">
+              FK
+            </div>
+            <div>
+              <div class="fl-name">Fambay Ka</div>
+              <div class="fl-role">Développeur Frontend</div>
+              <div class="fl-country">
+                🇸🇳 Sénégal · Fouta/Remote
+              </div>
+            </div>
+          </div>
+          <div class="stars mb-2">★★★★☆
+            <span style="font-size:0.75rem;
+                         color:var(--text-muted);">
+              (14 avis)
+            </span>
+          </div>
+          <p class="fl-bio">
+            Développeur frontend passionné par les
+            interfaces modernes et accessibles.
+          </p>
+          <div class="mb-2">
+            <span class="skill-tag">React</span>
+            <span class="skill-tag">Vue.js</span>
+            <span class="skill-tag">Tailwind</span>
+          </div>
+          <div class="fl-footer">
+            <div class="fl-tjm">380 €/jour</div>
+            <div class="fl-avail">
+              <div class="fl-avail-dot"></div>
+              Disponible
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Carte 9 — Design -->
+      <div class="col-md-6 col-lg-4 fl-item"
+           data-cat="design"
+           data-name="fatou sy ux design dakar senegal">
+        <div class="freelance-card">
+          <div class="fl-top">
+            <div class="fl-avatar"
+                 style="background:#fde8df;
+                        color:var(--terra);">
+              FS
+            </div>
+            <div>
+              <div class="fl-name">Fatou Sy</div>
+              <div class="fl-role">UX Designer</div>
+              <div class="fl-country">
+                🇸🇳 Sénégal · Dakar/Remote
+              </div>
+            </div>
+          </div>
+          <div class="stars mb-2">★★★★☆
+            <span style="font-size:0.75rem;
+                         color:var(--text-muted);">
+              (21 avis)
+            </span>
+          </div>
+          <p class="fl-bio">
+            Spécialisée en design d'interfaces mobiles
+            africaines. Expérience en recherche utilisateur.
+          </p>
+          <div class="mb-2">
+            <span class="skill-tag">Figma</span>
+            <span class="skill-tag">Adobe XD</span>
+            <span class="skill-tag">Research</span>
+          </div>
+          <div class="fl-footer">
+            <div class="fl-tjm">350 €/jour</div>
+            <div class="fl-avail">
+              <div class="fl-avail-dot"></div>
+              Disponible
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Aucun résultat -->
+    <div id="no-results" style="
+      display: none;
+      text-align: center;
+      padding: 4rem 0;
+      color: var(--text-muted);">
+      <div style="font-size:3rem;margin-bottom:1rem;">🔍</div>
+      <h4>Aucun profil trouvé</h4>
+      <p>Essayez une autre catégorie ou recherche.</p>
+    </div>
+
+    <!-- Bouton voir plus -->
+    <div class="text-center mt-5">
+      <a href="#" class="btn-terra">
+        Voir tous les freelances →
+      </a>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ═══ SECTION AVIS CLIENTS ═══ -->
 <section class="py-5" style="background: var(--cream);">
   <div class="container">
 
-    <!-- Titre -->
     <div class="text-center mb-5">
-       
+      <div class="section-label">Avis clients</div>
+      <h2 style="
+        font-family: var(--font-titre);
+        font-size: 2rem;">
+        Ce que disent nos clients
+      </h2>
+    </div>
+
     <div class="row g-4">
 
-      <!-- Carte 1 -->
+      <!-- Avis 1 -->
       <div class="col-md-6 col-lg-3">
         <div class="at-card">
           <div class="stars mb-2">★★★★★</div>
-          <p style="font-size: 0.9rem; color: var(--text-muted); 
-                     font-style: italic; margin-bottom: 1.25rem;">
-            "Ama a livré un travail exceptionnel en un temps record. 
-             Je recommande vivement !"
+          <p style="
+            font-size: 0.9rem;
+            color: var(--text-muted);
+            font-style: italic;
+            margin-bottom: 1.25rem;">
+            "Ama a livré un travail exceptionnel en un
+             temps record. Je recommande vivement !"
           </p>
           <div class="d-flex align-items-center gap-3">
-            <div class="avatar-circle" 
-                 style="background: #fde8df; color: var(--terra);">
+            <div class="avatar-circle"
+                 style="background:#fde8df;
+                        color:var(--terra);">
               PD
             </div>
             <div>
-              <div style="font-weight: 700; font-size: 0.85rem;">
+              <div style="font-weight:700;font-size:0.85rem;">
                 Paul Diakité
               </div>
-              <div style="font-size: 0.75rem; color: var(--text-muted);">
+              <div style="font-size:0.75rem;
+                           color:var(--text-muted);">
                 CEO · StartupTech Dakar
               </div>
             </div>
@@ -78,25 +595,30 @@ href="contact.html">Contact</a></li>
         </div>
       </div>
 
-      <!-- Carte 2 -->
+      <!-- Avis 2 -->
       <div class="col-md-6 col-lg-3">
         <div class="at-card">
           <div class="stars mb-2">★★★★★</div>
-          <p style="font-size: 0.9rem; color: var(--text-muted); 
-                     font-style: italic; margin-bottom: 1.25rem;">
-            "Mohamed a transformé nos données en insights clairs. 
-             Très sérieux et ponctuel !"
+          <p style="
+            font-size: 0.9rem;
+            color: var(--text-muted);
+            font-style: italic;
+            margin-bottom: 1.25rem;">
+            "Mohamed a transformé nos données en insights
+             clairs. Très sérieux et ponctuel !"
           </p>
           <div class="d-flex align-items-center gap-3">
-            <div class="avatar-circle" 
-                 style="background: #dcfce7; color: #15803d;">
+            <div class="avatar-circle"
+                 style="background:#dcfce7;
+                        color:#15803d;">
               SK
             </div>
             <div>
-              <div style="font-weight: 700; font-size: 0.85rem;">
+              <div style="font-weight:700;font-size:0.85rem;">
                 Sarah Koffi
               </div>
-              <div style="font-size: 0.75rem; color: var(--text-muted);">
+              <div style="font-size:0.75rem;
+                           color:var(--text-muted);">
                 Directrice · DataCorp Abidjan
               </div>
             </div>
@@ -104,25 +626,30 @@ href="contact.html">Contact</a></li>
         </div>
       </div>
 
-      <!-- Carte 3 -->
+      <!-- Avis 3 -->
       <div class="col-md-6 col-lg-3">
         <div class="at-card">
           <div class="stars mb-2">★★★★☆</div>
-          <p style="font-size: 0.9rem; color: var(--text-muted); 
-                     font-style: italic; margin-bottom: 1.25rem;">
-            "Fatima a compris notre vision dès le premier appel. 
-             Le design a dépassé nos attentes !"
+          <p style="
+            font-size: 0.9rem;
+            color: var(--text-muted);
+            font-style: italic;
+            margin-bottom: 1.25rem;">
+            "Fatima a compris notre vision dès le premier
+             appel. Le design a dépassé nos attentes !"
           </p>
           <div class="d-flex align-items-center gap-3">
-            <div class="avatar-circle" 
-                 style="background: #ede9fe; color: #6d28d9;">
+            <div class="avatar-circle"
+                 style="background:#ede9fe;
+                        color:#6d28d9;">
               BT
             </div>
             <div>
-              <div style="font-weight: 700; font-size: 0.85rem;">
+              <div style="font-weight:700;font-size:0.85rem;">
                 Bruno Tano
               </div>
-              <div style="font-size: 0.75rem; color: var(--text-muted);">
+              <div style="font-size:0.75rem;
+                           color:var(--text-muted);">
                 Fondateur · AppMobile Lagos
               </div>
             </div>
@@ -130,288 +657,42 @@ href="contact.html">Contact</a></li>
         </div>
       </div>
 
-      <!-- Carte 4 -->
+      <!-- Avis 4 -->
       <div class="col-md-6 col-lg-3">
         <div class="at-card">
           <div class="stars mb-2">★★★★★</div>
-          <p style="font-size: 0.9rem; color: var(--text-muted); 
-                     font-style: italic; margin-bottom: 1.25rem;">
-            "Seun a migré notre infrastructure cloud en 3 semaines 
-             sans interruption. Impressionnant !"
+          <p style="
+            font-size: 0.9rem;
+            color: var(--text-muted);
+            font-style: italic;
+            margin-bottom: 1.25rem;">
+            "Seun a migré notre infrastructure cloud en
+             3 semaines sans interruption. Impressionnant !"
           </p>
           <div class="d-flex align-items-center gap-3">
-            <div class="avatar-circle" 
-                 style="background: #fef9e5; color: #a06a00;">
+            <div class="avatar-circle"
+                 style="background:#fef9e5;
+                        color:#a06a00;">
               AM
             </div>
             <div>
-              <div style="font-weight: 700; font-size: 0.85rem;">
+              <div style="font-weight:700;font-size:0.85rem;">
                 Alain Mensah
               </div>
-              <div style="font-size: 0.75rem; color: var(--text-muted);">
+              <div style="font-size:0.75rem;
+                           color:var(--text-muted);">
                 CTO · FinanceApp Accra
               </div>
             </div>
           </div>
         </div>
       </div>
-       <!-- Carte 5 -->
-      <div class="col-md-6 col-lg-3">
-        <div class="at-card">
-          <div class="stars mb-2">★★★★☆</div>
-          <p style="font-size: 0.9rem; color: var(--text-muted); 
-                     font-style: italic; margin-bottom: 1.25rem;">
-            Expert en sécurité des infrastructures cloud et on-premise. Accompagne les organisations africaines
-             dans leur conformité RGPD et leur protection contre les cybermenaces.
-          </p>
-          <div class="d-flex align-items-center gap-3">
-            <div class="avatar-circle" 
-                 style="background: #ede9fe; color: #6d28d9;">
-              IT
-            </div>
-            <div>
-              <div style="font-weight: 700; font-size: 0.85rem;">
-                 Ibrahim Touré
-              </div>
-              <div style="font-size: 0.75rem; color: var(--text-muted);">
-                DevOps / Cybersécurité
-            Mali · Bamako/Remote
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-       <!-- Carte 6 -->
-      <div class="col-md-6 col-lg-3">
-        <div class="at-card">
-          <div class="stars mb-2">★★★★☆</div>
-          <p style="font-size: 0.9rem; color: var(--text-muted); 
-                     font-style: italic; margin-bottom: 1.25rem;">
-            Développeuse iOS native depuis 6 ans. Maîtrise SwiftUI, Combine et les frameworks Apple.
-             Ses applications comptent parmi les mieux notées de l'App Store en Afrique subsaharienne.
-          </p>
-           <div class="d-flex align-items-center gap-3">
-            <div class="avatar-circle" 
-                 style="background: #ede9fe; color: #6d28d9;">
-              AE
-            </div>
-            <div>
-              <div style="font-weight: 700; font-size: 0.85rem;">
-                 Ada Eze
-              </div>
-              <div style="font-size: 0.75rem; color: var(--text-muted);">
-                iOS Developer · Swift
-                Nigeria · Remote
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
- <!-- Carte 7 -->
-      <div class="col-md-6 col-lg-3">
-        <div class="at-card">
-          <div class="stars mb-2">★★★★☆</div>
-          <p style="font-size: 0.9rem; color: var(--text-muted); 
-                     font-style: italic; margin-bottom: 1.25rem;">
-            Développeuse iOS native depuis 6 ans. Maîtrise SwiftUI, Combine et les frameworks Apple.
-             Ses applications comptent parmi les mieux notées de l'App Store en Afrique subsaharienne.
-          </p>
-      <div class="d-flex align-items-center gap-3">
-            <div class="avatar-circle" 
-                 style="background: #ede9fe; color: #6d28d9;">
-              UY
-            </div>
-            <div>
-              <div style="font-weight: 700; font-size: 0.85rem;">
-                 USSEY YEMEN
-              </div>
-              <div style="font-size: 0.75rem; color: var(--text-muted);">
-                iOS Developer · Swift
-                Niger · Remote
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <!-- Carte 7 -->
-      <div class="col-md-6 col-lg-3">
-        <div class="at-card">
-          <div class="stars mb-2">★★★★☆</div>
-          <p style="font-size: 0.9rem; color: var(--text-muted); 
-                     font-style: italic; margin-bottom: 1.25rem;">
-            Développeuse iOS native depuis 6 ans. Maîtrise SwiftUI, Combine et les frameworks Apple.
-             Ses applications comptent parmi les mieux notées de l'App Store en Afrique subsaharienne.
-          </p>
-      <div class="d-flex align-items-center gap-3">
-            <div class="avatar-circle" 
-                 style="background: #ede9fe; color: #6d28d9;">
-              UY
-            </div>
-            <div>
-              <div style="font-weight: 700; font-size: 0.85rem;">
-                 USSEY YEMEN
-              </div>
-              <div style="font-size: 0.75rem; color: var(--text-muted);">
-                iOS Developer · Swift
-                Niger · Remote
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <!-- Carte 7 -->
-      <div class="col-md-6 col-lg-3">
-        <div class="at-card">
-          <div class="stars mb-2">★★★★☆</div>
-          <p style="font-size: 0.9rem; color: var(--text-muted); 
-                     font-style: italic; margin-bottom: 1.25rem;">
-            Développeuse iOS native depuis 6 ans. Maîtrise SwiftUI, Combine et les frameworks Apple.
-             Ses applications comptent parmi les mieux notées de l'App Store en Afrique subsaharienne.
-          </p>
-      <div class="d-flex align-items-center gap-3">
-            <div class="avatar-circle" 
-                 style="background: #ede9fe; color: #6d28d9;">
-              UY
-            </div>
-            <div>
-              <div style="font-weight: 700; font-size: 0.85rem;">
-                 USSEY YEMEN
-              </div>
-              <div style="font-size: 0.75rem; color: var(--text-muted);">
-                iOS Developer · Swift
-                Niger · Remote
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <!-- Carte 7 -->
-      <div class="col-md-6 col-lg-3">
-        <div class="at-card">
-          <div class="stars mb-2">★★★★☆</div>
-          <p style="font-size: 0.9rem; color: var(--text-muted); 
-                     font-style: italic; margin-bottom: 1.25rem;">
-            Développeuse iOS native depuis 6 ans. Maîtrise SwiftUI, Combine et les frameworks Apple.
-             Ses applications comptent parmi les mieux notées de l'App Store en Afrique subsaharienne.
-          </p>
-      <div class="d-flex align-items-center gap-3">
-            <div class="avatar-circle" 
-                 style="background: #ede9fe; color: #6d28d9;">
-              UY
-            </div>
-            <div>
-              <div style="font-weight: 700; font-size: 0.85rem;">
-                 USSEY YEMEN
-              </div>
-              <div style="font-size: 0.75rem; color: var(--text-muted);">
-                iOS Developer · Swift
-                Niger · Remote
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <!-- Carte 8 -->
-      <div class="col-md-6 col-lg-3">
-        <div class="at-card">
-          <div class="stars mb-2">★★★★☆</div>
-          <p style="font-size: 0.9rem; color: var(--text-muted); 
-                     font-style: italic; margin-bottom: 1.25rem;">
-            Développeuse iOS native depuis 6 ans. Maîtrise SwiftUI, Combine et les frameworks Apple.
-             Ses applications comptent parmi les mieux notées de l'App Store en Afrique subsaharienne.
-          </p>
-      <div class="d-flex align-items-center gap-3">
-            <div class="avatar-circle" 
-                 style="background: #ede9fe; color: #6d28d9;">
-              FK
-            </div>
-            <div>
-              <div style="font-weight: 700; font-size: 0.85rem;">
-                 Fambay Ka
-              </div>
-              <div style="font-size: 0.75rem; color: var(--text-muted);">
-                <UI-X>   · Swift
-                Senegal · fouta
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
- <!-- Carte 8 -->
-      <div class="col-md-6 col-lg-3">
-        <div class="at-card">
-          <div class="stars mb-2">★★★★☆</div>
-          <p style="font-size: 0.9rem; color: var(--text-muted); 
-                     font-style: italic; margin-bottom: 1.25rem;">
-            Développeuse iOS native depuis 6 ans. Maîtrise SwiftUI, Combine et les frameworks Apple.
-             Ses applications comptent parmi les mieux notées de l'App Store en Afrique subsaharienne.
-          </p>
-      <div class="d-flex align-items-center gap-3">
-            <div class="avatar-circle" 
-                 style="background: #ede9fe; color: #6d28d9;">
-              FK
-            </div>
-            <div>
-              <div style="font-weight: 700; font-size: 0.85rem;">
-                 Fatou SY
-              </div>
-              <div style="font-size: 0.75rem; color: var(--text-muted);">
-                <UI-X>   · Swift
-                Senegal · Dakar
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
 
     </div>
   </div>
 </section>
- </div>
- </section>
 
- <div class="filter-bar">
-  <button class="filter-btn active" data-filter="tous">
-    🌍 Tous
-  </button>
-  <button class="filter-btn" data-filter="dev">
-    💻 Dev
-  </button>
-  <button class="filter-btn" data-filter="design">
-    🎨 Design
-  </button>
-  <button class="filter-btn" data-filter="data">
-    📊 Data
-  </button>
-  <button class="filter-btn" data-filter="mobile">
-    📱 Mobile
-  </button>
-  <button class="filter-btn" data-filter="devops">
-    ⚙️ DevOps
-  </button>
-</div>
-
-<input type="text" 
-       id="search-input"
-       class="search-input"
-       placeholder="🔍 Rechercher un freelance...">
-
-       <div class="text-center mb-5">
-  <div class="section-label">Nos Freelances</div>
-  <h2 style="font-size: 2rem;">
-    8 500+ talents tech vérifiés
-  </h2>
-  <p style="color: var(--text-muted);">
-    Trouvez le freelance idéal pour votre projet
-  </p>
-</div>
-
-<div class="text-center mt-5">
-  <a href="#" class="btn-terra">
-    Voir tous les freelances →
-  </a>
-</div>
+</main>
    <footer>
  <div class="footer-expand-lg py-4 bg-dark">
  <p>&copy; 2025 AfriTalent. Tous droits reserves.</p>
@@ -421,6 +702,42 @@ href="contact.html">Contact</a></li>
 src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
 ></script>
  <script src="js/main.js"></script>
+ <script>
+  const filterBtns = document.querySelectorAll('.filter-btn');
+  const items = document.querySelectorAll('.fl-item');
+  const searchInput = document.getElementById('search-input');
+  const noResults = document.getElementById('no-results');
+  const resultCount = document.getElementById('result-count');
+  let activeFilter = 'tous';
+
+  function applyFilters() {
+    const q = searchInput.value.toLowerCase().trim();
+    let count = 0;
+    items.forEach(item => {
+      const catMatch = activeFilter === 'tous' ||
+                       item.dataset.cat === activeFilter;
+      const searchMatch = !q ||
+                          item.dataset.name.includes(q);
+      const show = catMatch && searchMatch;
+      item.style.display = show ? '' : 'none';
+      if (show) count++;
+    });
+    resultCount.textContent = count + ' profil' +
+                              (count > 1 ? 's' : '');
+    noResults.style.display = count === 0 ? 'block' : 'none';
+  }
+
+  filterBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      filterBtns.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      activeFilter = btn.dataset.filter;
+      applyFilters();
+    });
+  });
+
+  searchInput.addEventListener('input', applyFilters);
+</script>
 
 </body> 
 </html>

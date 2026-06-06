@@ -415,7 +415,75 @@ src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.j
 ></script>
  <script src="js/main.js"></script>
        
+<script>
+  // Compteur caractères
+  document.getElementById('message').addEventListener('input', () => {
+    document.getElementById('charCount').textContent =
+      document.getElementById('message').value.length;
+  });
 
+  // Soumission
+  document.getElementById('contactForm').addEventListener('submit',
+  function(e) {
+    e.preventDefault();
+    let isValid = true;
+
+    // Reset toutes les erreurs
+    document.querySelectorAll('[id^="err-"]').forEach(el => {
+      el.style.display = 'none';
+    });
+
+    const prenom  = document.getElementById('prenom').value.trim();
+    const nom     = document.getElementById('nom').value.trim();
+    const email   = document.getElementById('email').value.trim();
+    const profil  = document.getElementById('profil').value;
+    const sujet   = document.getElementById('sujet').value.trim();
+    const message = document.getElementById('message').value.trim();
+    const rgpd    = document.getElementById('rgpd').checked;
+
+    if (prenom.length < 2) {
+      document.getElementById('err-prenom').style.display = 'block';
+      isValid = false;
+    }
+    if (nom.length < 2) {
+      document.getElementById('err-nom').style.display = 'block';
+      isValid = false;
+    }
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+      document.getElementById('err-email').style.display = 'block';
+      isValid = false;
+    }
+    if (!profil) {
+      document.getElementById('err-profil').style.display = 'block';
+      isValid = false;
+    }
+    if (sujet.length < 5) {
+      document.getElementById('err-sujet').style.display = 'block';
+      isValid = false;
+    }
+    if (message.length < 20) {
+      document.getElementById('err-message').style.display = 'block';
+      isValid = false;
+    }
+    if (!rgpd) {
+      document.getElementById('err-rgpd').style.display = 'block';
+      isValid = false;
+    }
+
+    if (!isValid) return;
+
+    // Simulation envoi
+    const btn = document.getElementById('submitBtn');
+    btn.textContent = 'Envoi en cours...';
+    btn.disabled = true;
+
+    setTimeout(() => {
+      document.getElementById('contactForm').style.display = 'none';
+      document.getElementById('successMessage').style.display = 'block';
+    }, 1200);
+
+  });
+</script>
 
 </body>
 </html>
